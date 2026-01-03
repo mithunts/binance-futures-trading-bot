@@ -1,27 +1,33 @@
 Project explanation
-## How to Run
 
-1. Install dependencies:
-   ```bash
-   pip install -r requirements.txt
+# 🚀 Binance Futures Trading Bot (Python)
 
-python cli.py
+A simplified **crypto trading bot** built using **Python** and the **Binance Futures Testnet API (USDT-M)**.  
+This project demonstrates API integration, clean code structure, logging, and basic algorithmic trading strategies.
 
 ---
 
-### ⬇️ Commit
-- Commit message:
--
+## 📌 Project Overview
 
-- Click **Commit changes**
+This trading bot allows users to place **Buy/Sell orders** on the **Binance Futures Testnet** via a **Command Line Interface (CLI)**.  
+It supports multiple order types and includes logging, error handling, and modular design for easy extension.
 
 ---
 
-## 🔹 STEP 4.2: Run the Bot Locally (NO GITHUB CLICK)
+## ✨ Features
 
-This part is done on **your laptop**, not GitHub.
+- Binance **USDT-M Futures Testnet** support
+- Market and Limit orders
+- Buy & Sell order sides
+- Advanced strategies:
+  - TWAP (Time Weighted Average Price)
+  - Grid Trading
+- Real-time price streaming using WebSocket
+- Command Line Interface (CLI)
+- Input validation
+- Logging of API requests, responses, and errors
+- Unit testing support
 
-### 🧪 Run:
-```bash
-pip install python-binance
-python cli.py
+---
+
+## 🧱 Project Structure
