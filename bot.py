@@ -18,10 +18,10 @@ class BasicBot:
                 type="MARKET",
                 quantity=quantity
             )
-            logger.info(f"Market Order Placed: {order}")
+            logger.info(f"Market order placed: {order}")
             return order
         except BinanceAPIException as e:
-            logger.error(f"Market Order Error: {e}")
+            logger.error(f"Market order error: {e}")
             return None
 
     def place_limit_order(self, symbol, side, quantity, price):
@@ -34,25 +34,8 @@ class BasicBot:
                 price=price,
                 timeInForce="GTC"
             )
-            logger.info(f"Limit Order Placed: {order}")
+            logger.info(f"Limit order placed: {order}")
             return order
         except BinanceAPIException as e:
-            logger.error(f"Limit Order Error: {e}")
-            return None
-
-    def place_stop_limit_order(self, symbol, side, quantity, stop_price, limit_price):
-        try:
-            order = self.client.futures_create_order(
-                symbol=symbol,
-                side=side,
-                type="STOP",
-                quantity=quantity,
-                price=limit_price,
-                stopPrice=stop_price,
-                timeInForce="GTC"
-            )
-            logger.info(f"Stop-Limit Order Placed: {order}")
-            return order
-        except BinanceAPIException as e:
-            logger.error(f"Stop-Limit Order Error: {e}")
+            logger.error(f"Limit order error: {e}")
             return None
