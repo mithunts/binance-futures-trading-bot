@@ -1,1 +1,4 @@
 Sample log output
+
+pip install python-binance
+python cli.py
